@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import * as d3 from "d3";
@@ -50,7 +49,6 @@ function App() {
     toast.info("Logged out successfully!");
   };
 
-  
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -220,7 +218,7 @@ function App() {
           <div className="col-md-4">
             <input
               name="title"
-              className="form-control"
+              className="form-control shadow-none"
               value={form.title}
               onChange={handleChange}
               placeholder="Title"
