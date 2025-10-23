@@ -111,3 +111,13 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # DEFAULT PRIMARY KEY FIELD TYPE
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOWED_HOSTS = ['*']
+
+# Render deploy setup
+if 'RENDER' in os.environ:
+    DEBUG = False
+
+    # Allow Render’s domain
+    ALLOWED_HOSTS = ['*']
+
+    # Static files setup
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
